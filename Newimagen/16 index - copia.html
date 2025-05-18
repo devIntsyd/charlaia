@@ -49,59 +49,13 @@
       scroll-behavior: smooth;
     }
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
+      font-family: Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.75;
+      background-color: #f8f9fa;
+      color: #2d3748;
       margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #007bff;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-    nav {
-      background-color: #343a40;
-      padding: 10px 0;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      padding: 20px;
-    }
-    .card {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      margin: 20px 0;
-      padding: 20px;
-    }
-    .btn {
-      background-color: #007bff;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background-color: #0056b3;
-    }
-    footer {
-      background-color: #343a40;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      position: relative;
-      bottom: 0;
-      width: 100%;
     }
     h1, h2, h3, h4 {
       font-family: Arial, sans-serif;
@@ -139,8 +93,8 @@
       font-size: 30px;
     }
     h4.highlighted-h4 {
-      font-size: 34px;
-      font-weight: 700;
+      font-size: 34px; /* Aumentado 4px respecto al tamaño base de h4 */
+      font-weight: 700; /* Negrita explícita */
       color: #1a4971;
       background-color: #e6f0fa;
       padding: 8px 16px;
@@ -157,6 +111,84 @@
     a:hover {
       text-decoration: underline;
       background-color: rgba(43, 108, 176, 0.1);
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+    nav {
+      background-color: #ffffff;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+    nav .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+    }
+    nav .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+    nav .nav-links a.active {
+      background-color: #1a4971;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: 2px solid #1a4971;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      text-decoration: none;
+    }
+    nav .mobile-menu {
+      display: none;
+    }
+    nav .mobile-toggle {
+      display: none;
+    }
+    nav .mobile-menu a.active {
+      background-color: #1a4971;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      border: 2px solid #1a4971;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      text-decoration: none;
+    }
+    main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 96px 24px 48px;
+    }
+    .subnav {
+      position: sticky;
+      top: 64px;
+      z-index: 9;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 16px 0;
+      margin-bottom: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+    .subnav a.active {
+      color: #1a4971;
+      border-bottom: 4px solid #1a4971;
+      background-color: #e6f0fa;
+      padding: 8px 12px;
+      border-radius: 4px;
+      text-decoration: none;
     }
     .career-image {
       max-width: 100%;
@@ -281,21 +313,15 @@
     .back-to-top.show {
       display: block;
     }
-    .qr-btn {
-      display: inline-block;
+    .btn {
       background-color: #2b6cb0;
+      color: white;
+      padding: 10px 20px;
       border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       transition: background-color 0.3s ease;
     }
-    .qr-btn:hover {
+    .btn:hover {
       background-color: #1a4971;
-    }
-    .qr-btn img {
-      display: block;
-      width: 150px;
-      height: 150px;
-      border-radius: 6px;
     }
     @media screen and (min-width: 768px) {
       body {
@@ -406,7 +432,7 @@
       <!-- Imagen Introductoria -->
       <img src="intro_image.png" alt="Imagen introductoria de la IA en la vida cotidiana: una persona usando un dispositivo inteligente" class="career-image">
       <div class="card">
-        <h3 class="introduction"><i>"La inteligencia artificial está revolucionando el mundo, desde cómo trabajamos hasta cómo nos entretenemos: ¿estás listo para explorar cómo puede cambiar tu vida y el futuro que imaginas?"</i></h3>
+        <h3 class="introduction"><i>“La inteligencia artificial está revolucionando el mundo, desde cómo trabajamos hasta cómo nos entretenemos: ¿estás listo para explorar cómo puede cambiar tu vida y el futuro que imaginas?”</i></h3>
         <!-- Espacio en blanco adicional -->
         <div class="mt-10"></div>
         <!-- Nuevos Títulos con Placeholders para Imágenes -->
@@ -416,10 +442,10 @@
         <h4 class="highlighted-h4">Test de Turing</h4>
         <img src="test_turing_image.png" alt="Imagen representativa del Test de Turing para evaluar la inteligencia de las máquinas" class="career-image">
 
-        <h4 class="highlighted-h4">Realidad Actual</h4>
+        <h4 class="highlighted-h4">Eventos hasta hoy</h4>
         <img src="eventos_hasta_hoy_image.png" alt="Imagen que muestra eventos clave en la historia de la IA hasta 2025" class="career-image">
 
-        <h4>"Quien no use Inteligencia Artificial será reemplazado por alguien que sí lo haga."</h4>
+        <h4>Rob Thomas</h4>
         <img src="rob_thomas_image.png" alt="Imagen relacionada con Rob Thomas y su contribución al campo de la IA" class="career-image">
 
         <h4 class="highlighted-h4">Tiempos de Adopción</h4>
@@ -445,10 +471,10 @@
             <li><strong>Analogía:</strong> Compara la IA con una receta de cocina. Los datos son los ingredientes, los algoritmos son las instrucciones, y el plato final es la tarea que la IA realiza.</li>
           </ul>
           <h4 class="mb-4">Ejemplo Práctico</h4>
-          <p class="mb-4">Muestra una imagen de un asistente virtual como Siri. "Cuando le preguntas a tu celular '¿qué tiempo hace hoy?', la IA escucha tu voz, la convierte en texto, busca información y te responde. Todo en segundos."</p>
+          <p class="mb-4">Muestra una imagen de un asistente virtual como Siri. “Cuando le preguntas a tu celular ‘¿qué tiempo hace hoy?’, la IA escucha tu voz, la convierte en texto, busca información y te responde. Todo en segundos.”</p>
           <details class="mb-4">
             <summary class="text-teal-600 cursor-pointer font-medium">Dinámica</summary>
-            <p class="mt-2">Pide a cada persona que nombre una tarea que le gustaría que una máquina haga por ellos (ej. "organizar mi agenda"). Usa esto para explicar que la IA ya puede hacer algunas de esas tareas.</p>
+            <p class="mt-2">Pide a cada persona que nombre una tarea que le gustaría que una máquina haga por ellos (ej. “organizar mi agenda”). Usa esto para explicar que la IA ya puede hacer algunas de esas tareas.</p>
           </details>
         </div>
       </div>
@@ -467,7 +493,7 @@
             <li><strong>IA Súperinteligente:</strong> Una IA que supera a los humanos en todo. Es especulativa.</li>
           </ul>
           <h4 class="mb-4">Ejemplo Práctico</h4>
-          <p class="mb-4"><strong>IA Estrecha:</strong> Usa una captura de pantalla de recomendaciones de YouTube. "YouTube usa IA para aprender qué videos te gusta, pero no puede escribir un libro."<br><strong>IA General:</strong> Usa a JARVIS de Iron Man para ilustrar, pero aclara que no es real aún.</p>
+          <p class="mb-4"><strong>IA Estrecha:</strong> Usa una captura de pantalla de recomendaciones de YouTube. “YouTube usa IA para aprender qué videos te gusta, pero no puede escribir un libro.”<br><strong>IA General:</strong> Usa a JARVIS de Iron Man para ilustrar, pero aclara que no es real aún.</p>
           <details class="mb-4">
             <summary class="text-teal-600 cursor-pointer font-medium">Dinámica</summary>
             <p class="mt-2">Divide al grupo en parejas y pide que discutan si prefieren una IA que haga una sola cosa muy bien o una IA general. Luego, que compartan sus ideas.</p>
@@ -491,7 +517,7 @@
             <li><strong>Transporte:</strong> GPS con IA (Waze) o autos autónomos.</li>
           </ul>
           <h4 class="mb-4">Ejemplo Práctico</h4>
-          <p class="mb-4">Muestra un video de un auto autónomo de Tesla. "La IA ve el entorno con cámaras, decide cuándo frenar o girar." O usa Google Translate para traducir una frase en tiempo real.</p>
+          <p class="mb-4">Muestra un video de un auto autónomo de Tesla. “La IA ve el entorno con cámaras, decide cuándo frenar o girar.” O usa Google Translate para traducir una frase en tiempo real.</p>
           <details class="mb-4">
             <summary class="text-teal-600 cursor-pointer font-medium">Dinámica</summary>
             <p class="mt-2">Pide a cada persona que comparta una app que usa a diario. Explica cómo la IA está detrás (ej. Spotify usa IA para playlists).</p>
@@ -510,13 +536,13 @@
           <ul class="list-disc pl-5 mb-4">
             <li><strong>Datos:</strong> La IA necesita grandes cantidades de información para aprender.</li>
             <li><strong>Algoritmos:</strong> Reglas matemáticas que procesan los datos.</li>
-            <li><strong>Entrenamiento:</strong> La IA "aprende" ajustándose con ejemplos.</li>
+            <li><strong>Entrenamiento:</strong> La IA “aprende” ajustándose con ejemplos.</li>
           </ul>
           <h4 class="mb-4">Ejemplo Práctico</h4>
-          <p class="mb-4">"Google Photos encuentra fotos de playa porque fue entrenada con millones de imágenes etiquetadas como 'playa'. O explica cómo una IA como <span class="tooltip">ChatGPT<span class="tooltip-text">Modelo de lenguaje que genera texto conversacional.</span></span> responde preguntas.</p>
+          <p class="mb-4">“Google Photos encuentra fotos de playa porque fue entrenada con millones de imágenes etiquetadas como ‘playa’.” O explica cómo una IA como <span class="tooltip">ChatGPT<span class="tooltip-text">Modelo de lenguaje que genera texto conversacional.</span></span> responde preguntas.</p>
           <details class="mb-4">
             <summary class="text-teal-600 cursor-pointer font-medium">Dinámica</summary>
-            <p class="mt-2">Muestra 5 imágenes de animales (3 perros, 2 gatos). Pide al grupo que "entrenen" una IA imaginaria diciendo si cada imagen es "perro" o "gato".</p>
+            <p class="mt-2">Muestra 5 imágenes de animales (3 perros, 2 gatos). Pide al grupo que “entrenen” una IA imaginaria diciendo si cada imagen es “perro” o “gato”.</p>
           </details>
         </div>
       </div>
@@ -537,20 +563,20 @@
           <p class="mb-4"><strong>Oportunidad:</strong> AlphaFold resolvió el plegamiento de proteínas, ayudando a crear medicamentos.<br><strong>Desafío:</strong> Una IA de reconocimiento facial confundió a personas de ciertos grupos étnicos.</p>
           <details class="mb-4">
             <summary class="text-teal-600 cursor-pointer font-medium">Dinámica</summary>
-            <p class="mt-2">Pregunta: "Si pudieras usar la IA para resolver un problema del mundo, ¿cuál sería?" Da 1 minuto para que cada persona piense y comparta.</p>
+            <p class="mt-2">Pregunta: “Si pudieras usar la IA para resolver un problema del mundo, ¿cuál sería?” Da 1 minuto para que cada persona piense y comparta.</p>
           </details>
         </div>
       </div>
       <!-- Cierre -->
       <div id="cierre" class="mb-32 fade-in">
-        <h4>Convierte la IA en tu compañero</h4>
+        <h4>Cierre</h4>
         <!-- Add your image file here (e.g., path/to/your/closure_image.jpg) -->
         <!-- Suggested: Inspirational image of AI empowering people -->
         <img src="closure_image.png" alt="Imagen inspiradora: la IA empoderando a las personas para un futuro mejor" class="career-image mb-6">
         <div class="card p-8 rounded-lg">
           <p class="mb-4"><strong>Resumen:</strong> La IA es el presente, no solo el futuro. Aprendimos qué es, sus tipos, cómo se usa hoy, cómo funciona, y sus oportunidades y desafíos.</p>
-          <p class="mb-4"><strong>Conclusión:</strong> "La inteligencia artificial no es solo el futuro; es el presente que tú puedes moldear, ¡así que empieza a explorar, preguntar y crear con ella hoy mismo!"</p>
-          <p class="mb-4"><strong>Preguntas:</strong> Invita al grupo a preguntar o reflexionar: "¿Qué les sorprendió más de la IA hoy?"</p>
+          <p class="mb-4"><strong>Conclusión:</strong> “La inteligencia artificial no es solo el futuro; es el presente que tú puedes moldear, ¡así que empieza a explorar, preguntar y crear con ella hoy mismo!”</p>
+          <p class="mb-4"><strong>Preguntas:</strong> Invita al grupo a preguntar o reflexionar: “¿Qué les sorprendió más de la IA hoy?”</p>
           <p><strong>Recursos:</strong> Explora más en <a href="https://x.ai/grok" target="_blank">xAI</a> o busca videos introductorios sobre IA en YouTube.</p>
         </div>
       </div>
@@ -559,6 +585,9 @@
     <!-- Sección 2: Historia de IA -->
     <section id="timeline" class="mb-40 fade-in">
       <h4 class="highlighted-h4 text-center mb-8">Historia de la Inteligencia Artificial</h4>
+      <!-- Add your image file here (e.g., path/to/your/ai_history_image.jpg) -->
+      <!-- Suggested: Historical image of AI evolution (e.g., timeline graphic) -->
+      <img src="ai_history_image.png" alt="Imagen histórica de la evolución de la IA: gráfico de línea de tiempo" class="career-image mb-6">
       <div class="timeline relative max-w-5xl mx-auto">
         <div class="timeline-item left">
           <div class="timeline-content card">
@@ -569,13 +598,13 @@
         <div class="timeline-item right">
           <div class="timeline-content card">
             <h3 class="font-semibold text-teal-600 mb-2">1950</h3>
-            <p>Alan Turing publica "Computing Machinery and Intelligence" y propone el Test de Turing para evaluar la inteligencia de las máquinas.</p>
+            <p>Alan Turing publica “Computing Machinery and Intelligence” y propone el Test de Turing para evaluar la inteligencia de las máquinas.</p>
           </div>
         </div>
         <div class="timeline-item left">
           <div class="timeline-content card">
             <h3 class="font-semibold text-teal-600 mb-2">1956</h3>
-            <p>Conferencia de Dartmouth: John McCarthy acuña el término "inteligencia artificial", marcando el nacimiento de la disciplina.</p>
+            <p>Conferencia de Dartmouth: John McCarthy acuña el término “inteligencia artificial”, marcando el nacimiento de la disciplina.</p>
           </div>
         </div>
         <div class="timeline-item right">
@@ -730,45 +759,45 @@
           <details class="step-card p-6 rounded-lg">
             <summary class="font-semibold text-teal-600 cursor-pointer">1. Identifica el Objetivo</summary>
             <p class="mt-2"><strong>Qué hacer:</strong> Define claramente qué quieres que la IA logre (ej. responder, generar contenido).</p>
-            <p class="mb-2"><strong>Ejemplo:</strong> "Quiero que la IA explique qué es la inteligencia artificial para principiantes."</p>
+            <p class="mb-2"><strong>Ejemplo:</strong> “Quiero que la IA explique qué es la inteligencia artificial para principiantes.”</p>
             <p><strong>Consejo:</strong> Piensa en una tarea específica para evitar respuestas vagas.</p>
           </details>
           <details class="step-card p-6 rounded-lg">
             <summary class="font-semibold text-teal-600 cursor-pointer">2. Proporciona Contexto</summary>
             <p class="mt-2"><strong>Qué hacer:</strong> Incluye información sobre el público o propósito.</p>
-            <p class="mb-2"><strong>Ejemplo:</strong> "Explica la IA a 6 adultos sin experiencia técnica en una charla."</p>
+            <p class="mb-2"><strong>Ejemplo:</strong> “Explica la IA a 6 adultos sin experiencia técnica en una charla.”</p>
             <p><strong>Consejo:</strong> El contexto adapta la respuesta a tus necesidades.</p>
           </details>
           <details class="step-card p-6 rounded-lg">
             <summary class="font-semibold text-teal-600 cursor-pointer">3. Sé Específico</summary>
             <p class="mt-2"><strong>Qué hacer:</strong> Detalla formato, tono, longitud y restricciones.</p>
-            <p class="mb-2"><strong>Ejemplo:</strong> "Explica la IA en 100 palabras, tono amigable, con ejemplo de Siri."</p>
+            <p class="mb-2"><strong>Ejemplo:</strong> “Explica la IA en 100 palabras, tono amigable, con ejemplo de Siri.”</p>
             <p><strong>Consejo:</strong> La especificidad asegura resultados útiles.</p>
           </details>
           <details class="step-card p-6 rounded-lg">
             <summary class="font-semibold text-teal-600 cursor-pointer">4. Incluye Ejemplos</summary>
             <p class="mt-2"><strong>Qué hacer:</strong> Proporciona un modelo de respuesta esperada.</p>
-            <p class="mb-2"><strong>Ejemplo:</strong> "Escribe un correo como: 'Estimado Juan, te invitamos a nuestra charla de IA.'"</p>
+            <p class="mb-2"><strong>Ejemplo:</strong> “Escribe un correo como: ‘Estimado Juan, te invitamos a nuestra charla de IA.’”</p>
             <p><strong>Consejo:</strong> Los ejemplos guían el estilo y formato.</p>
           </details>
           <details class="step-card p-6 rounded-lg">
             <summary class="font-semibold text-teal-600 cursor-pointer">5. Define Restricciones</summary>
             <p class="mt-2"><strong>Qué hacer:</strong> Indica qué evitar (ej. jerga, temas sensibles).</p>
-            <p class="mb-2"><strong>Ejemplo:</strong> "Sin términos como 'algoritmo' ni referencias a ciencia ficción."</p>
+            <p class="mb-2"><strong>Ejemplo:</strong> “Sin términos como ‘algoritmo’ ni referencias a ciencia ficción.”</p>
             <p><strong>Consejo:</strong> Las restricciones mantienen la respuesta relevante.</p>
           </details>
           <details class="step-card p-6 rounded-lg">
             <summary class="font-semibold text-teal-600 cursor-pointer">6. Prueba y Ajusta</summary>
             <p class="mt-2"><strong>Qué hacer:</strong> Revisa la respuesta y reformula si es necesario.</p>
-            <p class="mb-2"><strong>Ejemplo:</strong> Si es técnica, ajusta: "Usa solo ejemplos cotidianos."</p>
+            <p class="mb-2"><strong>Ejemplo:</strong> Si es técnica, ajusta: “Usa solo ejemplos cotidianos.”</p>
             <p><strong>Consejo:</strong> Iterar mejora la calidad del prompt.</p>
           </details>
         </div>
       </div>
       <div class="callout p-8 rounded-lg mb-6">
         <h3 class="mb-4">Ejemplo de Prompt</h3>
-        <p class="mb-2"><strong>Prompt:</strong> "Explica qué es la inteligencia artificial en un párrafo de 100 palabras, dirigido a un público general sin experiencia técnica, con un tono amigable y un ejemplo cotidiano como Siri. Evita términos técnicos como 'machine learning' o 'algoritmos'. Incluye una analogía simple, como comparar la IA con una receta de cocina. La respuesta debe ser clara y motivadora para inspirar curiosidad."</p>
-        <p><strong>Respuesta esperada:</strong> "La inteligencia artificial es como una receta de cocina: con datos e instrucciones, las máquinas hacen tareas humanas, como pensar o decidir. Por ejemplo, cuando usas Siri para buscar una canción, la IA escucha, entiende y responde en segundos. No es magia, ¡es tecnología que aprende! La IA está en Google Maps guiándote a casa o en Netflix sugiriéndote películas. Es una herramienta que nos ayuda a diario y sigue creciendo, lista para que la explores."</p>
+        <p class="mb-2"><strong>Prompt:</strong> “Explica qué es la inteligencia artificial en un párrafo de 100 palabras, dirigido a un público general sin experiencia técnica, con un tono amigable y un ejemplo cotidiano como Siri. Evita términos técnicos como ‘machine learning’ o ‘algoritmos’. Incluye una analogía simple, como comparar la IA con una receta de cocina. La respuesta debe ser clara y motivadora para inspirar curiosidad.”</p>
+        <p><strong>Respuesta esperada:</strong> “La inteligencia artificial es como una receta de cocina: con datos e instrucciones, las máquinas hacen tareas humanas, como pensar o decidir. Por ejemplo, cuando usas Siri para buscar una canción, la IA escucha, entiende y responde en segundos. No es magia, ¡es tecnología que aprende! La IA está en Google Maps guiándote a casa o en Netflix sugiriéndote películas. Es una herramienta que nos ayuda a diario y sigue creciendo, lista para que la explores.”</p>
       </div>
       <!-- Nuevos Ejemplos de Prompts -->
       <div class="card p-8 rounded-lg mb-6">
@@ -784,7 +813,7 @@
               </details>
               <details class="step-card p-4 rounded-lg">
                 <summary class="font-semibold text-teal-600 cursor-pointer">Prompt Mejorado:</summary>
-                <p class="mt-2">"Explica qué es la inteligencia artificial en un párrafo de 100 palabras, dirigido a un público general sin experiencia técnica, con un tono amigable y un ejemplo cotidiano como Siri. Evita términos técnicos como 'machine learning' o 'algoritmos'. Incluye una analogía simple, como comparar la IA con una receta de cocina. La respuesta debe ser clara y motivadora para inspirar curiosidad. Si el texto es demasiado técnico, ajusta usando ejemplos más simples."</p>
+                <p class="mt-2">"Explica qué es la inteligencia artificial en un párrafo de 100 palabras, dirigido a un público general sin experiencia técnica, con un tono amigable y un ejemplo cotidiano como Siri. Evita términos técnicos como ‘machine learning’ o ‘algoritmos’. Incluye una analogía simple, como comparar la IA con una receta de cocina. La respuesta debe ser clara y motivadora para inspirar curiosidad. Si el texto es demasiado técnico, ajusta usando ejemplos más simples."</p>
               </details>
             </div>
           </details>
@@ -810,7 +839,7 @@
               </details>
               <details class="step-card p-4 rounded-lg">
                 <summary class="font-semibold text-teal-600 cursor-pointer">Prompt Mejorado:</summary>
-                <p class="mt-2">"Proporciona una lista de 10 datos interesantes sobre la inteligencia artificial para incluir en un boletín mensual dirigido a empleados de una empresa tecnológica. Usa un tono profesional pero accesible, con cada dato en una oración de 15-20 palabras. Incluye ejemplos como: 'La IA de DeepMind venció al campeón mundial de Go en 2016.' Evita datos demasiado técnicos o estadísticas complejas. Si la lista no es relevante para el público, ajusta enfocándote en aplicaciones prácticas de IA en el trabajo."</p>
+                <p class="mt-2">"Proporciona una lista de 10 datos interesantes sobre la inteligencia artificial para incluir en un boletín mensual dirigido a empleados de una empresa tecnológica. Usa un tono profesional pero accesible, con cada dato en una oración de 15-20 palabras. Incluye ejemplos como: ‘La IA de DeepMind venció al campeón mundial de Go en 2016.’ Evita datos demasiado técnicos o estadísticas complejas. Si la lista no es relevante para el público, ajusta enfocándote en aplicaciones prácticas de IA en el trabajo."</p>
               </details>
             </div>
           </details>
@@ -823,7 +852,7 @@
               </details>
               <details class="step-card p-4 rounded-lg">
                 <summary class="font-semibold text-teal-600 cursor-pointer">Prompt Mejorado:</summary>
-                <p class="mt-2">"Explica cómo las máquinas aprenden a realizar tareas en un párrafo de 80-100 palabras, dirigido a adultos sin conocimientos técnicos, para un blog introductorio sobre IA. Usa un tono amigable y una analogía sencilla, como comparar el aprendizaje de máquinas con un niño que aprende a reconocer animales. Incluye un ejemplo práctico, como: 'Una máquina aprende a identificar gatos viendo miles de fotos de gatos.' Evita términos técnicos como 'machine learning', 'redes neuronales' o 'algoritmos'. Si la explicación es confusa, ajusta usando ejemplos más cotidianos."</p>
+                <p class="mt-2">"Explica cómo las máquinas aprenden a realizar tareas en un párrafo de 80-100 palabras, dirigido a adultos sin conocimientos técnicos, para un blog introductorio sobre IA. Usa un tono amigable y una analogía sencilla, como comparar el aprendizaje de máquinas con un niño que aprende a reconocer animales. Incluye un ejemplo práctico, como: ‘Una máquina aprende a identificar gatos viendo miles de fotos de gatos.’ Evita términos técnicos como ‘machine learning’, ‘redes neuronales’ o ‘algoritmos’. Si la explicación es confusa, ajusta usando ejemplos más cotidianos."</p>
               </details>
             </div>
           </details>
@@ -836,7 +865,7 @@
               </details>
               <details class="step-card p-4 rounded-lg">
                 <summary class="font-semibold text-teal-600 cursor-pointer">Prompt Mejorado:</summary>
-                <p class="mt-2">"Escribe un correo electrónico formal invitando a un cliente a un evento de lanzamiento de un producto de IA, programado para el 20 de junio de 2025 en Bogotá, de 6:00 p.m. a 9:00 p.m. El correo debe tener un tono profesional y cortés, con un máximo de 150 palabras, incluyendo un saludo, una breve descripción del evento (como 'presentaremos nuestra nueva herramienta de IA para marketing'), y un cierre con RSVP. Usa un formato como: 'Estimado [Nombre], le invitamos a… Atentamente, [Tu Nombre].' Evita jerga técnica o detalles logísticos excesivos. Si el correo parece demasiado informal, ajusta el tono para que sea más profesional."</p>
+                <p class="mt-2">"Escribe un correo electrónico formal invitando a un cliente a un evento de lanzamiento de un producto de IA, programado para el 20 de junio de 2025 en Bogotá, de 6:00 p.m. a 9:00 p.m. El correo debe tener un tono profesional y cortés, con un máximo de 150 palabras, incluyendo un saludo, una breve descripción del evento (como ‘presentaremos nuestra nueva herramienta de IA para marketing’), y un cierre con RSVP. Usa un formato como: ‘Estimado [Nombre], le invitamos a… Atentamente, [Tu Nombre].’ Evita jerga técnica o detalles logísticos excesivos. Si el correo parece demasiado informal, ajusta el tono para que sea más profesional."</p>
               </details>
             </div>
           </details>
@@ -849,7 +878,7 @@
               </details>
               <details class="step-card p-4 rounded-lg">
                 <summary class="font-semibold text-teal-600 cursor-pointer">Prompt Mejorado:</summary>
-                <p class="mt-2">"Resume la historia de la inteligencia artificial en un párrafo de 150 palabras, dirigido a un público general para un artículo en una revista educativa. Usa un tono informativo y accesible, destacando 3-4 hitos clave, como: 'En 1956, John McCarthy acuñó el término IA en Dartmouth.' Evita detalles técnicos como algoritmos o nombres de modelos específicos, y no incluyas eventos posteriores a 2025. Si el resumen es demasiado largo o técnico, ajusta reduciendo detalles y usando un lenguaje más simple."</p>
+                <p class="mt-2">"Resume la historia de la inteligencia artificial en un párrafo de 150 palabras, dirigido a un público general para un artículo en una revista educativa. Usa un tono informativo y accesible, destacando 3-4 hitos clave, como: ‘En 1956, John McCarthy acuñó el término IA en Dartmouth.’ Evita detalles técnicos como algoritmos o nombres de modelos específicos, y no incluyas eventos posteriores a 2025. Si el resumen es demasiado largo o técnico, ajusta reduciendo detalles y usando un lenguaje más simple."</p>
               </details>
             </div>
           </details>
@@ -862,7 +891,7 @@
               </details>
               <details class="step-card p-4 rounded-lg">
                 <summary class="font-semibold text-teal-600 cursor-pointer">Prompt Mejorado:</summary>
-                <p class="mt-2">"Escribe un artículo de 300 palabras sobre los beneficios de la inteligencia artificial, dirigido a propietarios de pequeñas empresas para un blog de tecnología. Usa un tono optimista y profesional, destacando 3 beneficios clave (como automatización, análisis de datos y personalización), con un ejemplo práctico por beneficio, como: 'La IA puede analizar datos de ventas para predecir tendencias.' Evita términos técnicos como 'big data' o 'modelos predictivos'. Si el artículo es demasiado largo, ajusta reduciendo a 2 beneficios con ejemplos más breves."</p>
+                <p class="mt-2">"Escribe un artículo de 300 palabras sobre los beneficios de la inteligencia artificial, dirigido a propietarios de pequeñas empresas para un blog de tecnología. Usa un tono optimista y profesional, destacando 3 beneficios clave (como automatización, análisis de datos y personalización), con un ejemplo práctico por beneficio, como: ‘La IA puede analizar datos de ventas para predecir tendencias.’ Evita términos técnicos como ‘big data’ o ‘modelos predictivos’. Si el artículo es demasiado largo, ajusta reduciendo a 2 beneficios con ejemplos más breves."</p>
               </details>
             </div>
           </details>
@@ -875,7 +904,7 @@
               </details>
               <details class="step-card p-4 rounded-lg">
                 <summary class="font-semibold text-teal-600 cursor-pointer">Prompt Mejorado:</summary>
-                <p class="mt-2">"Crea un anuncio de 50 palabras para una herramienta de IA que genera contenido para redes sociales, dirigido a emprendedores jóvenes, para publicar en Instagram. Usa un tono creativo y dinámico, incluyendo un llamado a la acción como: '¡Prueba nuestra herramienta hoy y aumenta tu alcance!' Evita jerga técnica o precios. Si el tono no es adecuado, ajusta para que sea más atractivo para el público objetivo."</p>
+                <p class="mt-2">"Crea un anuncio de 50 palabras para una herramienta de IA que genera contenido para redes sociales, dirigido a emprendedores jóvenes, para publicar en Instagram. Usa un tono creativo y dinámico, incluyendo un llamado a la acción como: ‘¡Prueba nuestra herramienta hoy y aumenta tu alcance!’ Evita jerga técnica o precios. Si el tono no es adecuado, ajusta para que sea más atractivo para el público objetivo."</p>
               </details>
             </div>
           </details>
@@ -888,7 +917,7 @@
               </details>
               <details class="step-card p-4 rounded-lg">
                 <summary class="font-semibold text-teal-600 cursor-pointer">Prompt Mejorado:</summary>
-                <p class="mt-2">"Genera 5 ideas de proyectos de IA para un curso de tecnología dirigido a estudiantes universitarios, con un enfoque en resolver problemas cotidianos. Cada idea debe incluir un título y una descripción de 30-40 palabras, como: 'App de Estudio con IA: Una app que crea planes de estudio personalizados.' Evita proyectos que requieran hardware avanzado o conocimientos técnicos profundos. Si las ideas son demasiado complejas, ajusta para que sean más accesibles para estudiantes."</p>
+                <p class="mt-2">"Genera 5 ideas de proyectos de IA para un curso de tecnología dirigido a estudiantes universitarios, con un enfoque en resolver problemas cotidianos. Cada idea debe incluir un título y una descripción de 30-40 palabras, como: ‘App de Estudio con IA: Una app que crea planes de estudio personalizados.’ Evita proyectos que requieran hardware avanzado o conocimientos técnicos profundos. Si las ideas son demasiado complejas, ajusta para que sean más accesibles para estudiantes."</p>
               </details>
             </div>
           </details>
@@ -901,56 +930,7 @@
               </details>
               <details class="step-card p-4 rounded-lg">
                 <summary class="font-semibold text-teal-600 cursor-pointer">Prompt Mejorado:</summary>
-                <p class="mt-2">"Escribe un poema de 4 estrofas, con 4 versos cada una, sobre los beneficios de la IA, para incluir en un evento escolar dirigido a niños de 10-12 años. Usa un tono alegre y rimas simples, como: 'La IA nos ayuda a aprender, con juegos que no dejan de sorprender.' Evita temas complejos o tristes. Si el poema no rima bien o es demasiado avanzado, ajusta usando rimas más simples y un lenguaje más infantil."</p>
-              </details>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección 4.1: Ejemplos de Prompt con Estructura # -->
-    <section id="prompt-examples" class="mb-40 fade-in">
-      <h2 class="mb-8 text-center">Ejemplos de Prompt con Estructura #</h2>
-      <div class="card p-8 rounded-lg mb-6">
-        <p class="mb-4">El uso del marcador # en los prompts ayuda a estructurar la información y guiar a la IA de manera más efectiva. A continuación, te presentamos 3 ejemplos detallados que muestran cómo utilizar esta estructura para obtener resultados óptimos.</p>
-        <div class="space-y-6">
-          <details class="step-card p-6 rounded-lg">
-            <summary class="font-semibold text-teal-600 cursor-pointer">Ejemplo 1: Crear un Resumen de un Libro</summary>
-            <div class="mt-2 space-y-4">
-              <details class="step-card p-4 rounded-lg">
-                <summary class="font-semibold text-teal-600 cursor-pointer">Estructura del Prompt:</summary>
-                <p class="mt-2"># Objetivo: Crear un resumen de un libro de ciencia ficción.<br># Audiencia: Estudiantes de secundaria.<br># Formato: Párrafo de 100 palabras.<br># Tono: Informal y motivador.<br># Ejemplo: "El libro 'Dune' de Frank Herbert narra la historia de Paul Atreides en un planeta desértico."<br># Restricciones: Evitar spoilers del final.</p>
-              </details>
-              <details class="step-card p-4 rounded-lg">
-                <summary class="font-semibold text-teal-600 cursor-pointer">Respuesta Esperada:</summary>
-                <p class="mt-2">"El libro 'Dune' de Frank Herbert sigue a Paul Atreides, un joven que se convierte en líder en un planeta desértico. Con intrigas políticas y batallas, Paul lucha por su supervivencia y el control de un recurso valioso. La historia es emocionante y llena de aventuras, perfecta para jóvenes lectores."</p>
-              </details>
-            </div>
-          </details>
-          <details class="step-card p-6 rounded-lg">
-            <summary class="font-semibold text-teal-600 cursor-pointer">Ejemplo 2: Generar un Anuncio para un Producto</summary>
-            <div class="mt-2 space-y-4">
-              <details class="step-card p-4 rounded-lg">
-                <summary class="font-semibold text-teal-600 cursor-pointer">Estructura del Prompt:</summary>
-                <p class="mt-2"># Objetivo: Crear un anuncio para un nuevo smartphone.<br># Audiencia: Adultos jóvenes.<br># Formato: 50 palabras.<br># Tono: Dinámico y atractivo.<br># Ejemplo: "Descubre el nuevo smartphone que cambia tu vida."<br># Restricciones: No mencionar precios.</p>
-              </details>
-              <details class="step-card p-4 rounded-lg">
-                <summary class="font-semibold text-teal-600 cursor-pointer">Respuesta Esperada:</summary>
-                <p class="mt-2">"Descubre el nuevo smartphone que cambia tu vida. Con tecnología de vanguardia y un diseño elegante, este dispositivo te mantiene conectado y productivo. ¡No te quedes atrás, actualiza tu experiencia móvil hoy!"</p>
-              </details>
-            </div>
-          </details>
-          <details class="step-card p-6 rounded-lg">
-            <summary class="font-semibold text-teal-600 cursor-pointer">Ejemplo 3: Escribir un Poema sobre la Naturaleza</summary>
-            <div class="mt-2 space-y-4">
-              <details class="step-card p-4 rounded-lg">
-                <summary class="font-semibold text-teal-600 cursor-pointer">Estructura del Prompt:</summary>
-                <p class="mt-2"># Objetivo: Escribir un poema sobre la naturaleza.<br># Audiencia: Niños de 8-12 años.<br># Formato: 4 estrofas, 4 versos cada una.<br># Tono: Alegre y educativo.<br># Ejemplo: "La naturaleza es un tesoro, lleno de vida y color."<br># Restricciones: Evitar temas tristes.</p>
-              </details>
-              <details class="step-card p-4 rounded-lg">
-                <summary class="font-semibold text-teal-600 cursor-pointer">Respuesta Esperada:</summary>
-                <p class="mt-2">"La naturaleza es un tesoro, lleno de vida y color.<br>Los árboles dan sombra y frutos, el sol brilla con ardor.<br>Los ríos fluyen libres, los pájaros cantan sin temor.<br>¡Cuidemos este regalo, que nos da tanto amor!"</p>
+                <p class="mt-2">"Escribe un poema de 4 estrofas, con 4 versos cada una, sobre los beneficios de la IA, para incluir en un evento escolar dirigido a niños de 10-12 años. Usa un tono alegre y rimas simples, como: ‘La IA nos ayuda a aprender, con juegos que no dejan de sorprender.’ Evita temas complejos o tristes. Si el poema no rima bien o es demasiado avanzado, ajusta usando rimas más simples y un lenguaje más infantil."</p>
               </details>
             </div>
           </details>
@@ -1022,15 +1002,8 @@
       <h2 class="mb-8 text-center">Encuesta para Participantes</h2>
       <div class="card p-8 rounded-lg">
         <p class="mb-4"><strong>Objetivo:</strong> Queremos conocer tu opinión sobre la charla para mejorar en el futuro. Por favor, completa esta breve encuesta que incluye preguntas sobre lo que aprendiste, tus intereses y áreas de mejora.</p>
-        <a href="https://intsyd.odoo.com/survey/start/6265617b-c660-4d2e-9e61-f4ccf0606aa0" target="_blank" class="btn inline-block">Completar Encuesta</a>
-        <p class="text-gray-500 note-text mt-2">Nota: La encuesta se abrirá en una nueva pestaña. Tus respuestas serán almacenadas de forma segura.</p>
-        <!-- Sección para el Código QR -->
-        <div class="mt-6 text-center">
-          <p class="mb-2">O escanea el código QR para acceder a la encuesta:</p>
-          <a href="https://intsyd.odoo.com/survey/start/6265617b-c660-4d2e-9e61-f4ccf0606aa0" target="_blank" class="qr-btn inline-block">
-            <img src="qr_code_image.png" alt="Código QR para la encuesta">
-          </a>
-        </div>
+        <a href="https://forms.gle/abc123" target="_blank" class="btn inline-block">Completar Encuesta</a>
+        <p class="text-gray-500 note-text mt-2">Nota: La encuesta se abrirá en una nueva pestaña. Tus respuestas serán almacenadas de forma segura en Google Forms.</p>
       </div>
     </section>
   </main>
@@ -1050,7 +1023,7 @@
       <p class="mt-2">Desarrollado por: Walter Falla Morales, +57 305 430 9656</p>
       <p class="mt-2">Empresa: Integrated Systems DEvelopers SAS [Intsyd] - <a href="https://www.intsyd.com" target="_blank">www.intsyd.com</a></p>
       <p class="mt-2">Para: Charla en La Campiña</p>
-      <p class="mt-2">© 17 de mayo de 2025, 06:20 PM -05</p>
+      <p class="mt-2">© 17 de mayo de 2025, 03:48 PM -05</p>
     </div>
   </footer>
 
@@ -1117,43 +1090,3 @@
         navLinks.forEach(l => l.classList.remove('active'));
         link.classList.add('active');
       });
-    });
-
-    // Volver arriba
-    const backToTop = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-      backToTop.classList.toggle('show', window.scrollY > 300);
-    });
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // Ordenar tabla
-    function sortTable(n, tableId) {
-      const table = document.getElementById(tableId);
-      let rows, switching = true, i, shouldSwitch, dir = "asc", switchcount = 0;
-      while (switching) {
-        switching = false;
-        rows = table.rows;
-        for (i = 1; i < (rows.length - 1); i++) {
-          shouldSwitch = false;
-          const x = rows[i].getElementsByTagName("TD")[n];
-          const y = rows[i + 1].getElementsByTagName("TD")[n];
-          let cmpX = x.innerHTML.toLowerCase();
-          let cmpY = y.innerHTML.toLowerCase();
-          if (dir == "asc") {
-            if (cmpX > cmpY) shouldSwitch = true;
-          } else if (dir == "desc") {
-            if (cmpX < cmpY) shouldSwitch = true;
-          }
-        }
-        if (shouldSwitch) {
-          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-          switching = true;
-          switchcount++;
-        }
-      }
-    }
-  </script>
-</body>
-</html>
