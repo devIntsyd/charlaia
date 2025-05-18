@@ -54,6 +54,7 @@
       color: #333;
       margin: 0;
       padding: 0;
+      font-size: 32px; /* Aumentado el tamaño de la fuente */
     }
     header {
       background-color: #007bff;
@@ -109,19 +110,19 @@
       line-height: 1.2;
     }
     h1 {
-      font-size: 26px;
+      font-size: 40px; /* Aumentado el tamaño de la fuente */
     }
     h2 {
-      font-size: 40px;
+      font-size: 52px; /* Aumentado el tamaño de la fuente */
       margin-bottom: 32px;
       text-align: center;
     }
     h3 {
-      font-size: 34px;
+      font-size: 46px; /* Aumentado el tamaño de la fuente */
       margin-bottom: 24px;
     }
     h3.introduction {
-      font-size: 48px;
+      font-size: 60px; /* Aumentado el tamaño de la fuente */
       font-weight: 800;
       color: #1a4971;
       background-color: #e6f0fa;
@@ -136,10 +137,10 @@
       font-style: italic;
     }
     h4 {
-      font-size: 30px;
+      font-size: 42px; /* Aumentado el tamaño de la fuente */
     }
     h4.highlighted-h4 {
-      font-size: 34px;
+      font-size: 46px; /* Aumentado el tamaño de la fuente */
       font-weight: 700;
       color: #1a4971;
       background-color: #e6f0fa;
@@ -148,7 +149,7 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .nav-link, .subnav-link, .table-text, .note-text {
-      font-size: 20px;
+      font-size: 28px; /* Aumentado el tamaño de la fuente */
     }
     a {
       color: #2b6cb0;
@@ -245,7 +246,7 @@
       margin-left: -100px;
       opacity: 0;
       transition: opacity 0.3s;
-      font-size: 20px;
+      font-size: 28px; /* Aumentado el tamaño de la fuente */
     }
     .tooltip:hover .tooltip-text {
       visibility: visible;
@@ -299,25 +300,25 @@
     }
     @media screen and (min-width: 768px) {
       body {
-        font-size: 24px;
+        font-size: 32px; /* Aumentado el tamaño de la fuente */
       }
       h1 {
-        font-size: 30px;
+        font-size: 40px; /* Aumentado el tamaño de la fuente */
       }
       h2 {
-        font-size: 46px;
+        font-size: 52px; /* Aumentado el tamaño de la fuente */
       }
       h3 {
-        font-size: 40px;
+        font-size: 46px; /* Aumentado el tamaño de la fuente */
       }
       h3.introduction {
-        font-size: 54px;
+        font-size: 60px; /* Aumentado el tamaño de la fuente */
       }
       h4 {
-        font-size: 34px;
+        font-size: 42px; /* Aumentado el tamaño de la fuente */
       }
       .nav-link, .subnav-link, .table-text, .note-text {
-        font-size: 22px;
+        font-size: 28px; /* Aumentado el tamaño de la fuente */
       }
     }
     @media screen and (max-width: 600px) {
@@ -352,7 +353,7 @@
         background-color: #f1f5f9;
       }
       h3.introduction {
-        font-size: 36px;
+        font-size: 46px; /* Aumentado el tamaño de la fuente */
         padding: 12px;
       }
     }
@@ -394,14 +395,16 @@
     <!-- Sección 1: Charla de IA -->
     <section id="charla" class="mb-40 fade-in">
       <h2>Charla sobre Inteligencia Artificial</h2>
+      <h3 class="text-center text-2xl font-semibold text-gray-700 mb-8">Objetivo: Compartir información y experiencias sobre Inteligencia Artificial</h3>
       <!-- Subnavegación -->
-      <div class="subnav">
+      <div class="subnav sticky top-0 bg-white shadow-md z-50">
         <a href="#section1" class="subnav-link font-medium">¿Qué es IA?</a>
         <a href="#section2" class="subnav-link font-medium">Tipos de IA</a>
         <a href="#section3" class="subnav-link font-medium">IA Cotidiana</a>
         <a href="#section4" class="subnav-link font-medium">Cómo Funciona</a>
         <a href="#section5" class="subnav-link font-medium">Futuro de IA</a>
         <a href="#cierre" class="subnav-link font-medium">Cierre</a>
+        <a href="#encuesta" class="subnav-link font-medium">Encuesta</a>
       </div>
       <!-- Imagen Introductoria -->
       <img src="intro_image.png" alt="Imagen introductoria de la IA en la vida cotidiana: una persona usando un dispositivo inteligente" class="career-image">
@@ -409,25 +412,32 @@
         <h3 class="introduction"><i>"La inteligencia artificial está revolucionando el mundo, desde cómo trabajamos hasta cómo nos entretenemos: ¿estás listo para explorar cómo puede cambiar tu vida y el futuro que imaginas?"</i></h3>
         <!-- Espacio en blanco adicional -->
         <div class="mt-10"></div>
+        <!-- Sección de Encuesta -->
+        <div id="encuesta" class="survey-section mb-8">
+          <h3 class="text-2xl font-bold mb-4">Encuesta de Nivel de Participantes - Sesión en Vivo</h3>
+          <p class="mb-4">Participa en nuestra encuesta para evaluar tu nivel de conocimiento sobre IA:</p>
+          <a href="https://www.intsyd.com/odoo/surveys/13" class="text-blue-600 hover:text-blue-800 underline mb-4 block">Haz clic aquí para participar en la encuesta</a>
+          <img src="survey_image.png" alt="Imagen representativa de la encuesta de nivel de participantes" class="career-image">
+        </div>
         <!-- Nuevos Títulos con Placeholders para Imágenes -->
         <h4 class="highlighted-h4">Ser Inteligente es:</h4>
         <img src="ser_inteligente_image.png" alt="Imagen ilustrativa de lo que significa ser inteligente en el contexto de la IA" class="career-image">
-
+        <hr class="my-8 border-t-2 border-gray-300">
         <h4 class="highlighted-h4">Test de Turing</h4>
         <img src="test_turing_image.png" alt="Imagen representativa del Test de Turing para evaluar la inteligencia de las máquinas" class="career-image">
-
+        <hr class="my-8 border-t-2 border-gray-300">
         <h4 class="highlighted-h4">Realidad Actual</h4>
         <img src="eventos_hasta_hoy_image.png" alt="Imagen que muestra eventos clave en la historia de la IA hasta 2025" class="career-image">
-
+        <hr class="my-8 border-t-2 border-gray-300">
         <h4>"Quien no use Inteligencia Artificial será reemplazado por alguien que sí lo haga."</h4>
         <img src="rob_thomas_image.png" alt="Imagen relacionada con Rob Thomas y su contribución al campo de la IA" class="career-image">
-
+        <hr class="my-8 border-t-2 border-gray-300">
         <h4 class="highlighted-h4">Tiempos de Adopción</h4>
         <img src="tiempos_adopcion_image.png" alt="Imagen que ilustra los tiempos de adopción de la IA en diferentes industrias" class="career-image">
-
+        <hr class="my-8 border-t-2 border-gray-300">
         <h4 class="highlighted-h4">4 Formas de usar IA</h4>
         <img src="cuatro_formas_IA_image.png" alt="Imagen que muestra cuatro formas prácticas de usar la IA en la vida diaria" class="career-image">
-
+        <hr class="my-8 border-t-2 border-gray-300">
         <h4>Modelos de IA de Texto</h4>
         <img src="modelos_IA_texto_image.png" alt="Imagen representativa de modelos de IA de texto como ChatGPT o Grok" class="career-image">
       </div>
@@ -910,8 +920,9 @@
     </section>
 
     <!-- Sección 4.1: Ejemplos de Prompt con Estructura # -->
+     
     <section id="prompt-examples" class="mb-40 fade-in">
-      <h2 class="mb-8 text-center">Ejemplos de Prompt con Estructura #</h2>
+      <h4 class="mb-8 text-center">Ejemplos de Prompt con Estructura #</h4>
       <div class="card p-8 rounded-lg mb-6">
         <p class="mb-4">El uso del marcador # en los prompts ayuda a estructurar la información y guiar a la IA de manera más efectiva. A continuación, te presentamos 3 ejemplos detallados que muestran cómo utilizar esta estructura para obtener resultados óptimos.</p>
         <div class="space-y-6">
@@ -958,6 +969,70 @@
       </div>
     </section>
 
+    <section id="prompt-perfecto" class="mb-40 fade-in">
+      <h2 class="mb-8 text-center">Como crear el prompt perfecto asistido</h2>
+      <div class="card p-8 rounded-lg mb-6">
+        <p class="mb-4">Aprende a crear prompts efectivos siguiendo estos pasos estructurados que te ayudarán a obtener los mejores resultados de la IA.</p>
+        
+        <div class="space-y-6">
+          <details class="step-card p-6 rounded-lg">
+            <summary class="font-semibold text-teal-600 cursor-pointer">1. Escribe con el mayor detalle lo que deseas</summary>
+            <div class="mt-2 space-y-4">
+              <p>Es fundamental ser específico y detallado en tu solicitud. Incluye:</p>
+              <ul class="list-disc pl-5">
+                <li>El objetivo principal</li>
+                <li>El público objetivo</li>
+                <li>El formato deseado</li>
+                <li>El tono de comunicación</li>
+                <li>Cualquier restricción o requisito especial</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="step-card p-6 rounded-lg">
+            <summary class="font-semibold text-teal-600 cursor-pointer">2. Indícale que actúe como un Ingeniero de Prompts</summary>
+            <div class="mt-2 space-y-4">
+              <p>Agrega esta instrucción al inicio de tu prompt:</p>
+              <div class="bg-gray-100 p-4 rounded">
+                <code>"Actúa como un Ingeniero de Prompts experto y ayúdame a estructurar mi solicitud de la manera más efectiva."</code>
+              </div>
+            </div>
+          </details>
+
+          <details class="step-card p-6 rounded-lg">
+            <summary class="font-semibold text-teal-600 cursor-pointer">3. Indícale que revise ese prompt</summary>
+            <div class="mt-2 space-y-4">
+              <p>Solicita una revisión detallada de tu prompt:</p>
+              <div class="bg-gray-100 p-4 rounded">
+                <code>"Por favor, revisa mi prompt y sugiere mejoras en términos de claridad, estructura y efectividad."</code>
+              </div>
+            </div>
+          </details>
+
+          <details class="step-card p-6 rounded-lg">
+            <summary class="font-semibold text-teal-600 cursor-pointer">4. Optimízalo para mejorarlo</summary>
+            <div class="mt-2 space-y-4">
+              <p>Implementa las sugerencias de mejora y solicita una versión optimizada:</p>
+              <div class="bg-gray-100 p-4 rounded">
+                <code>"Basándote en tu revisión, proporciona una versión optimizada de mi prompt que maximice la efectividad."</code>
+              </div>
+            </div>
+          </details>
+
+          <details class="step-card p-6 rounded-lg">
+            <summary class="font-semibold text-teal-600 cursor-pointer">5. Hazme cualquier pregunta antes de seguir</summary>
+            <div class="mt-2 space-y-4">
+              <p>Permite que la IA aclare cualquier duda antes de proceder:</p>
+              <div class="bg-gray-100 p-4 rounded">
+                <code>"¿Tienes alguna pregunta o necesitas más información antes de proceder con la generación?"</code>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    
     <!-- Sección 5: Impacto en las Carreras Profesionales -->
     <section id="careers-impact" class="mb-40 fade-in">
       <h4 class="highlighted-h4 text-center mb-8">Impacto en las Carreras Profesionales</h4>
