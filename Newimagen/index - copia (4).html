@@ -979,9 +979,9 @@
         
         <div class="space-y-8">
           <!-- Ejemplo 1 -->
-          <details class="bg-blue-50 p-6 rounded-lg">
-            <summary class="text-2xl font-bold text-blue-800 cursor-pointer">Ejemplo 1: Análisis de Documentos Legales</summary>
-            <div class="bg-white p-4 rounded-lg shadow-sm mt-4">
+          <div class="bg-blue-50 p-6 rounded-lg">
+            <h3 class="text-2xl font-bold text-blue-800 mb-4">Ejemplo 1: Análisis de Documentos Legales</h3>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
               <p class="font-semibold mb-2">Prompt:</p>
               <p class="mb-4">"Analiza este contrato de servicios y extrae los puntos clave sobre plazos de entrega y penalizaciones."</p>
               <p class="font-semibold mb-2">Respuesta de Notebook LM:</p>
@@ -994,12 +994,12 @@
               </ul>
               <p class="mt-2">¿Necesitas que profundice en algún aspecto específico?"</p>
             </div>
-          </details>
+          </div>
 
           <!-- Ejemplo 2 -->
-          <details class="bg-green-50 p-6 rounded-lg">
-            <summary class="text-2xl font-bold text-green-800 cursor-pointer">Ejemplo 2: Resumen de Investigación</summary>
-            <div class="bg-white p-4 rounded-lg shadow-sm mt-4">
+          <div class="bg-green-50 p-6 rounded-lg">
+            <h3 class="text-2xl font-bold text-green-800 mb-4">Ejemplo 2: Resumen de Investigación</h3>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
               <p class="font-semibold mb-2">Prompt:</p>
               <p class="mb-4">"Crea un resumen ejecutivo de este paper sobre inteligencia artificial en la educación."</p>
               <p class="font-semibold mb-2">Respuesta de Notebook LM:</p>
@@ -1018,12 +1018,12 @@
               </ul>
               <p class="mt-2">¿Deseas que profundice en algún aspecto específico del estudio?"</p>
             </div>
-          </details>
+          </div>
 
           <!-- Ejemplo 3 -->
-          <details class="bg-purple-50 p-6 rounded-lg">
-            <summary class="text-2xl font-bold text-purple-800 cursor-pointer">Ejemplo 3: Análisis de Datos Financieros</summary>
-            <div class="bg-white p-4 rounded-lg shadow-sm mt-4">
+          <div class="bg-purple-50 p-6 rounded-lg">
+            <h3 class="text-2xl font-bold text-purple-800 mb-4">Ejemplo 3: Análisis de Datos Financieros</h3>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
               <p class="font-semibold mb-2">Prompt:</p>
               <p class="mb-4">"Analiza estos estados financieros y proporciona insights sobre las tendencias de crecimiento."</p>
               <p class="font-semibold mb-2">Respuesta de Notebook LM:</p>
@@ -1051,12 +1051,12 @@
               </ul>
               <p class="mt-2">¿Necesitas un análisis más detallado de algún aspecto específico?"</p>
             </div>
-          </details>
+          </div>
 
           <!-- Ejemplo 4 -->
-          <details class="bg-orange-50 p-6 rounded-lg">
-            <summary class="text-2xl font-bold text-orange-800 cursor-pointer">Ejemplo 4: Revisión de Documentación Técnica</summary>
-            <div class="bg-white p-4 rounded-lg shadow-sm mt-4">
+          <div class="bg-orange-50 p-6 rounded-lg">
+            <h3 class="text-2xl font-bold text-orange-800 mb-4">Ejemplo 4: Revisión de Documentación Técnica</h3>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
               <p class="font-semibold mb-2">Prompt:</p>
               <p class="mb-4">"Revisa esta documentación técnica y sugiere mejoras para hacerla más clara y accesible."</p>
               <p class="font-semibold mb-2">Respuesta de Notebook LM:</p>
@@ -1086,7 +1086,7 @@
               </ul>
               <p class="mt-2">¿Deseas que profundice en alguna de estas sugerencias?"</p>
             </div>
-          </details>
+          </div>
         </div>
 
         <div class="mt-8 bg-gray-50 p-6 rounded-lg">
@@ -1241,39 +1241,15 @@
         </div>
       </div>
     </section>
-
-    <!-- Espacio para Imagen -->
-    <section id="imagen-espacio" class="mb-40 fade-in">
-      <h2 class="mb-8 text-center">Espacio para Imagen</h2>
-      <div class="card p-8 rounded-lg">
-        <img src="imagen_espacio.png" alt="Imagen de espacio" class="career-image mb-6">
-      </div>
-    </section>
-
-    <!-- Sección 7: Regalos -->
-    <section id="regalos" class="mb-40 fade-in">
-      <h2 class="mb-8 text-center">Regalos</h2>
-      <div class="card p-8 rounded-lg">
-        <div class="regalo-container space-y-4">
-          <details class="step-card p-6 rounded-lg">
-            <summary class="font-semibold text-teal-600 cursor-pointer">Regalo 01</summary>
-            <div class="regalo-content mt-4">
-              <a href="#" class="text-blue-600 hover:text-blue-800 underline">https://www.coursera.org/learn/chat-gpt</a>
-            </div>
-          </details>
-          <details class="step-card p-6 rounded-lg">
-            <summary class="font-semibold text-teal-600 cursor-pointer">Regalo 02</summary>
-            <div class="regalo-content mt-4">
-              <a href="#" class="text-blue-600 hover:text-blue-800 underline">https://console.cloud.google.com/cloud-setup/foundations?inv=1&invt=Abx2xw&project=eng-hash-460401-u7</a>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- Botón Volver Arriba -->
   <button id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Botón Descargar PDF -->
+  <div class="fixed bottom-20 right-20">
+    <button id="download-pdf" class="btn">Descargar PDF</button>
+  </div>
 
   <!-- Pie de Página -->
   <footer class="bg-gray-50 py-8">
@@ -1378,28 +1354,6 @@
           } else if (dir == "desc") {
             if (cmpX < cmpY) shouldSwitch = true;
           }
-
-          // Sección de Regalos
-          const regalosSection = document.createElement('section');
-          regalosSection.id = 'regalos';
-          regalosSection.innerHTML = `
-            <h2>Regalos</h2>
-            <div class="regalo-container">
-              <details>
-                <summary>Regalo 01</summary>
-                <div class="regalo-content">
-                  <a href="#" class="regalo-link">Agregar link del regalo aquí</a>
-                </div>
-              </details>
-              <details>
-                <summary>Regalo 02</summary>
-                <div class="regalo-content">
-                  <a href="#" class="regalo-link">Agregar link del regalo aquí</a>
-                </div>
-              </details>
-            </div>
-          `;
-          document.body.appendChild(regalosSection);
         }
         if (shouldSwitch) {
           rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
